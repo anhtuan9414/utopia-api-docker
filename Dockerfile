@@ -4,6 +4,7 @@ WORKDIR /app
 COPY install.sh /app/install.sh
 RUN bash install.sh
 
+COPY utopia.cfg /app/utopia.cfg
 COPY start.sh /app/start.sh
 RUN chmod +x /app/start.sh
 

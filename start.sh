@@ -8,3 +8,5 @@ if [ ! -f /app/account.db ]; then
     cd /app
 fi
 }
+
+/opt/utopia/messenger/utopia --headless --configPath=/app/utopia.cfg
