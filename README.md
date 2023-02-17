@@ -1,6 +1,8 @@
 
 ![logo](logo.jpg)
 
+This docker image allows you to quickly and easily run Utopia client with the configured API and start working right away.
+
 ## build image
 
 ```bash
