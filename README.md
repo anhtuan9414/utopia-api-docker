@@ -20,3 +20,8 @@ The following parameters are available to work with the API:
 * API token: `FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF`
 
 Alternative to using docker image: use the simple U for Ubuntu [installation script](https://gist.github.com/Sagleft/06b53576c0b763f77e4d38e15e28b023)
+
+## useful links
+
+* [Forum thread](https://talk.u.is/viewtopic.php?pid=5243#p5243)
+* [UDocs](https://udocs.gitbook.io/utopia-api/)
