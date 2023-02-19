@@ -1,2 +1,2 @@
 #!/bin/bash
-docker build . --tag utopia-api
+sudo docker build -t uto9234/utopia-api:latest .
