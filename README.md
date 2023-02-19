@@ -5,6 +5,23 @@ This docker image allows you to quickly and easily run Utopia client with the co
 
 Ready image: `uto9234/utopia-api` [from docker hub](https://hub.docker.com/repository/docker/uto9234/utopia-api/general).
 
+## run Utopia container
+
+Create your first Utopia container from image:
+
+```bash
+docker pull uto9234/utopia-api
+docker run -it uto9234/utopia-api --name utopia --memory=1024m --memory-reservation=256m
+```
+
+*NOTE: `--memory=1024m` - optional parameter to set max RAM for container to 1gb. `--memory-reservation=200m` - min RAM for container*
+
+run existing container:
+
+```bash
+docker start utopia
+```
+
 ## build image
 
 ```bash
