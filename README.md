@@ -11,7 +11,7 @@ Create your first Utopia container from image:
 
 ```bash
 docker pull uto9234/utopia-api
-docker run -it uto9234/utopia-api --name utopia --memory=1024m --memory-reservation=256m
+docker run --name utopia --memory=1024m --memory-reservation=256m -it uto9234/utopia-api
 ```
 
 *NOTE: `--memory=1024m` - optional parameter to set max RAM for container to 1gb. `--memory-reservation=200m` - min RAM for container*
