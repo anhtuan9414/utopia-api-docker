@@ -19,7 +19,7 @@ docker run --name utopia --memory=1024m --memory-reservation=256m -it uto9234/ut
 run existing container:
 
 ```bash
-docker start utopia
+docker container start utopia
 ```
 
 ## build image
