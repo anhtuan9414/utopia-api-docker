@@ -16,6 +16,12 @@ docker run --name utopia --memory=1024m --memory-reservation=256m --restart=alwa
 
 *NOTE: `--memory=1024m` - optional parameter to set max RAM for container to 1gb. `--memory-reservation=200m` - min RAM for container*
 
+or create container without running it:
+
+```bash
+docker create --name utopia --memory=1024m --memory-reservation=256m uto9234/utopia-api
+```
+
 run existing container:
 
 ```bash
