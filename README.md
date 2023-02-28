@@ -38,6 +38,31 @@ The following parameters are available to work with the API:
 
 Alternative to using docker image: use the simple U for Ubuntu [installation script](https://gist.github.com/Sagleft/06b53576c0b763f77e4d38e15e28b023)
 
+## If you want to use an existing account
+
+Then build the image, change the config file, and then put the account file inside the container.
+
+Step 1: build the image & create a container:
+
+```bash
+docker build -t utopia .
+docker create --name utopia-container --memory=1024m --memory-reservation=256m utopia
+```
+
+Step 2: update `utopia.cfg`: set account password.
+
+Step 3: copy account to container:
+
+```bash
+docker cp ./account.db utopia-container:/app/account.db
+```
+
+where:
+* `./account.db` - the path to the account on the machine. in this example, the path to the file in the current folder;
+* `utopia-container` - image name.
+
+*NOTE: it is recommended to clear the account file before using it if it was actively used in the GUI client before. This can be done through the menu item "File" -> "Export Database..."*
+
 ## useful links
 
 * [Forum thread](https://talk.u.is/viewtopic.php?pid=5243#p5243)
