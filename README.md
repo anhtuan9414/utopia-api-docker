@@ -11,15 +11,21 @@ Create your first Utopia container from image:
 
 ```bash
 docker pull uto9234/utopia-api
-docker run -it uto9234/utopia-api --name utopia --memory=1024m --memory-reservation=256m
+docker run --name utopia --memory=1024m --memory-reservation=256m --restart=always -it uto9234/utopia-api
 ```
 
 *NOTE: `--memory=1024m` - optional parameter to set max RAM for container to 1gb. `--memory-reservation=200m` - min RAM for container*
 
+or create container without running it:
+
+```bash
+docker create --name utopia --memory=1024m --memory-reservation=256m uto9234/utopia-api
+```
+
 run existing container:
 
 ```bash
-docker start utopia
+docker container start utopia
 ```
 
 ## build image
@@ -62,6 +68,20 @@ where:
 * `utopia-container` - image name.
 
 *NOTE: it is recommended to clear the account file before using it if it was actively used in the GUI client before. This can be done through the menu item "File" -> "Export Database..."*
+
+### how to prevent log memory shortages
+
+make the following changes to the file `/etc/docker/daemon.json`:
+
+```
+{
+  "log-driver": "json-file",
+  "log-opts": {
+    "max-size": "100m",
+    "max-file": "3"
+  }
+}
+```
 
 ## useful links
 
