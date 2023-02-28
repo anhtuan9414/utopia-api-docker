@@ -22,6 +22,8 @@ or create container without running it:
 docker create --name utopia --memory=1024m --memory-reservation=256m uto9234/utopia-api
 ```
 
+also you can add optional param `--restart=always` to auto-restart container.
+
 run existing container:
 
 ```bash
