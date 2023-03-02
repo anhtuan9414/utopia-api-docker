@@ -85,6 +85,13 @@ make the following changes to the file `/etc/docker/daemon.json`:
 }
 ```
 
+then restart docker daemon to apply changes
+
+```
+systemctl restart docker
+```
+
+
 ## useful links
 
 * [Forum thread](https://talk.u.is/viewtopic.php?pid=5243#p5243)
