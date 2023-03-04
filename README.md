@@ -91,6 +91,12 @@ then restart docker daemon to apply changes
 systemctl restart docker
 ```
 
+or you can setup cron:
+
+```
+*/5 * * * * truncate -s 1m /var/lib/docker/containers/*/*-json.log
+```
+
 
 ## useful links
 
