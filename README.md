@@ -58,7 +58,7 @@ docker build -t utopia .
 docker create --name utopia --memory=1024m --memory-reservation=256m uto9234/utopia-api
 ```
 
-Step 2: update `utopia.cfg`: set account password.
+Step 2: update `utopia.cfg`: set account password. By default: `password`.
 
 Step 3: copy account to container:
 
