@@ -55,7 +55,7 @@ Step 1: build the image & create a container:
 
 ```bash
 docker build -t utopia .
-docker create --name utopia-container --memory=1024m --memory-reservation=256m utopia
+docker create --name utopia --memory=1024m --memory-reservation=256m uto9234/utopia-api
 ```
 
 Step 2: update `utopia.cfg`: set account password.
@@ -63,12 +63,12 @@ Step 2: update `utopia.cfg`: set account password.
 Step 3: copy account to container:
 
 ```bash
-docker cp ./account.db utopia-container:/app/account.db
+docker cp ./account.db utopia:/app/account.db
 ```
 
 where:
 * `./account.db` - the path to the account on the machine. in this example, the path to the file in the current folder;
-* `utopia-container` - image name.
+* `utopia` - image name.
 
 *NOTE: it is recommended to clear the account file before using it if it was actively used in the GUI client before. This can be done through the menu item "File" -> "Export Database..."*
 
