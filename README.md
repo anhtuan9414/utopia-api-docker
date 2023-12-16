@@ -41,6 +41,7 @@ The first time you start the container, a new account file will be created.
 
 The following parameters are available to work with the API:
 * API port: `22825`
+* API websocket port: `25000`
 * API protocol: `http`
 * API token: `FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF`
 
