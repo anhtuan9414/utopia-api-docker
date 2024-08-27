@@ -156,6 +156,4 @@ networks:
 ```
 
 ## useful links
-
-* [Forum thread](https://talk.u.is/viewtopic.php?pid=5243#p5243)
-* [UDocs](https://udocs.gitbook.io/utopia-api/)
+[![udocs](https://github.com/Sagleft/ures/blob/master/udocs-btn.png?raw=true)](https://udocs.gitbook.io/utopia-api/)
