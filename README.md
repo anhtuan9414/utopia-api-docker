@@ -110,7 +110,50 @@ or you can setup cron:
 
 <a id="docker-compose"></a>
 ## Example of using docker-compose
-TODO
+
+```
+version: "2.2"
+
+services:
+  bot: # an example of your service that will be built from a Docker file
+    build: src/     # path to Docker file
+    restart: always # Restart when crashed
+    depends_on:
+      - utopia-api
+    networks:
+      - unetwork
+    environment:
+      UTOPIA_HOST: utopia-api                        #--------------------------------#
+      UTOPIA_TOKEN: FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF #       Passing connection       #
+      UTOPIA_PORT: 22825                             # parameters to your application #
+      UTOPIA_WS_PORT: 25000                          #--------------------------------#
+    logging:
+      driver: "json-file" #---------------------#
+      options:            # Limiting the number #
+        max-size: "10m"   #   and size of logs  #
+        max-file: "3"     #---------------------#
+
+  utopia-api:
+    image: uto9234/utopia-api # container
+    restart: always           # Restart when crashed
+    ports:
+      - 22825:22825 # API http port
+      - 25000:25000 # API websocket port
+    environment:
+      XDG_RUNTIME_DIR: /tmp/runtime-root  # To avoid displaying a warning at startup
+    networks:
+      - unetwork
+    volumes:                              # This allows you to set a specific path to an existing
+      - ./data/account.db:/app/account.db # account file. You can delete this to create new account
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "10m"
+        max-file: "3"
+
+networks:
+  unetwork:
+```
 
 ## useful links
 
