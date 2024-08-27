@@ -3,13 +3,19 @@
 
 This docker image allows you to quickly and easily run Utopia client with the configured API and start working right away.
 
-Ready image: `uto9234/utopia-api` [from docker hub](https://hub.docker.com/repository/docker/uto9234/utopia-api/general).
+Ready image: `uto9234/utopia-api` [from docker hub](https://hub.docker.com/repository/docker/uto9234/utopia-api/general). [Forum thread](https://talk.u.is/viewtopic.php?id=365).
 
 # Contents
 
 - [How to run a container](#run-container)
 - [How to connect to API](#utopia-api)
 - [Example of using docker-compose](#docker-compose)
+
+### Requirements
+
+- Docker 2.2+
+- 2+ gb RAM
+- 450+ mb free space.
 
 <a id="run-container"></a>
 ## How to run a container
