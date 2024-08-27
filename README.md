@@ -15,7 +15,7 @@ Ready image: `uto9234/utopia-api` [from docker hub](https://hub.docker.com/repos
 
 - Docker 2.2+
 - 2+ gb RAM
-- 450+ mb free space.
+- 1.4 gb free space.
 
 <a id="run-container"></a>
 ## How to run a container
