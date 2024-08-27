@@ -5,7 +5,14 @@ This docker image allows you to quickly and easily run Utopia client with the co
 
 Ready image: `uto9234/utopia-api` [from docker hub](https://hub.docker.com/repository/docker/uto9234/utopia-api/general).
 
-## run Utopia container
+# Contents
+
+- [How to run a container](#run-container)
+- [How to connect to API](#utopia-api)
+- [Example of using docker-compose](#docker-compose)
+
+<a id="run-container"></a>
+## How to run a container
 
 Create your first Utopia container from image:
 
@@ -30,13 +37,16 @@ run existing container:
 docker container start utopia
 ```
 
-## build image
+<a id="build-image"></a>
+## How to build image
 
 ```bash
 git clone https://github.com/Sagleft/utopia-api-docker && cd utopia-api-docker
 docker build . --tag utopia-api
 ```
 
+<a id="utopia-api"></a>
+## Utopia API
 The first time you start the container, a new account file will be created.
 
 The following parameters are available to work with the API:
@@ -98,6 +108,9 @@ or you can setup cron:
 */5 * * * * truncate -s 1m /var/lib/docker/containers/*/*-json.log
 ```
 
+<a id="docker-compose"></a>
+## Example of using docker-compose
+TODO
 
 ## useful links
 
