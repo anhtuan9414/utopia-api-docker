@@ -3,7 +3,8 @@
 
 This docker image allows you to quickly and easily run Utopia client with the configured API and start working right away.
 
-Ready image: `uto9234/utopia-api` [from docker hub](https://hub.docker.com/repository/docker/uto9234/utopia-api/general). [Forum thread](https://talk.u.is/viewtopic.php?id=365).
+- Ready image: `uto9234/utopia-api` [from docker hub](https://hub.docker.com/repository/docker/uto9234/utopia-api/general).
+- [Forum thread](https://talk.u.is/viewtopic.php?id=365).
 
 # Contents
 
